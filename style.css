@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #003366;
+}
+
+header {
+    background-color: #e6f2ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.navbar-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-color: #21aafa; /* Your signature bright blue */
+    padding: 15px;
+    list-style-type: none; 
+    margin: 0;
+    border-radius: 8px;
+}
+
+.navbar-item {
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar-item a, .navbar-item b {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.navbar-item a:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+fieldset {
+    border: 2px solid #003366;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+}
+
+legend {
+    color: #003366;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"] {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 250px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    border: 2px solid #003366;
+    overflow: hidden;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-card-back {
+    background-color: #e6f2ff;
+    color: #003366;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.cta-button {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #001f3f;
+    transform: scale(1.05);
+}
+
+input[type="submit"] {
+    background-color: #003366;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #001f3f;
+}
+
+input[type="reset"] {
+    background-color: #cc0000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #003366;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.login-card {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    width: 320px;
+    margin-bottom: 20px;
+}
+
+.login-card h3 {
+    margin-top: 0;
+}
+
+.pin-input {
+    width: 60px !important;
+    padding: 5px;
+}
+
+.ledger-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #ffffff;
+}
+
+.ledger-table th, .ledger-table td {
+    border: 1px solid #cccccc;
+    padding: 12px;
+    text-align: left;
+}
+
+.ledger-table th {
+    background-color: #003366;
+    color: white;
+}
+
+.status-paid {
+    background-color: #ccffcc;
+    color: #006600;
+    font-weight: bold;
+}
+
+.status-pending {
+    background-color: #ffcccc;
+    color: #cc0000;
+    font-weight: bold;
+}

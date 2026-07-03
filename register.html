@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapchap Pay - Join & Loans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 align="center">⚡ Chapchap Pay System</h1>
+        <p align="center">Apply for Membership or Loans</p>
+        
+        <nav>
+            <ul class="navbar-container">
+                <li class="navbar-item"><a href="index.html">Home</a></li>
+                <li class="navbar-item"><a href="contributions.html">Member Contributions</a></li>
+                <li class="navbar-item"><b style="border-bottom: 2px solid white; padding-bottom: 5px;">Join & Loans</b></li>
+                <li class="navbar-item"><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Application Desk</h2>
+        <p>Fill out the form below to register with the Chama or request an emergency payout loan.</p>
+        
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Personal Particulars</legend>
+                <p>
+                    <label for="fullName">Full Name:</label><br>
+                    <input type="text" id="fullName" name="fullName" required placeholder="e.g. Jane Doe">
+                </p>
+                <p>
+                    <label for="emailAddr">Email Address:</label><br>
+                    <input type="email" id="emailAddr" name="emailAddr" required>
+                </p>
+                <p>
+                    <label for="phoneNumber">M-Pesa Mobile Number:</label><br>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Application Type</legend>
+                <p>Select what transaction process you are requesting:</p>
+                <p>
+                    <input type="radio" id="registerOption" name="requestType" value="register">
+                    <label for="registerOption">New Member Registration</label>
+                </p>
+                <p>
+                    <input type="radio" id="loanOption" name="requestType" value="loan">
+                    <label for="loanOption">Chama Emergency Loan Request</label>
+                </p>
+                <p>
+                    <label for="loanAmount">Loan Amount Needed (if applicable - KES):</label><br>
+                    <input type="number" id="loanAmount" name="loanAmount" placeholder="e.g. 5000">
+                </p>
+            </fieldset>
+
+            <p>
+                <input type="submit" value="Submit Request">
+                <input type="reset" value="Clear Form">
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Chapchap Pay System. Designed for CSS Lab Submission.</p>
+    </footer>
+
+</body>
+</html>
