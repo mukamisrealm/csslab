@@ -228,3 +228,155 @@ footer {
     color: #cc0000;
     font-weight: bold;
 }
+/* =========================================================
+   DARK MODE OVERRIDES (Header, Nav Bar, Links & Text)
+   ========================================================= */
+
+/* Main Background */
+body.dark-theme {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+/* Header & Title Banner */
+body.dark-theme header,
+body.dark-theme .header,
+body.dark-theme .header-container {
+    background-color: #1f2937 !important;
+    color: #ffffff !important;
+    border-color: #374151 !important;
+}
+
+body.dark-theme header h1,
+body.dark-theme header h2,
+body.dark-theme header p,
+body.dark-theme header span {
+    color: #ffffff !important;
+}
+
+/* Navigation Bar & Links */
+body.dark-theme nav,
+body.dark-theme .navbar,
+body.dark-theme .nav-container {
+    background-color: #0f4c81 !important;
+}
+
+body.dark-theme nav a,
+body.dark-theme .navbar a,
+body.dark-theme nav li {
+    color: #ffffff !important;
+    text-shadow: none !important;
+}
+
+body.dark-theme nav a:hover,
+body.dark-theme .navbar a:hover {
+    color: #60a5fa !important;
+}
+
+/* Cards, Fieldsets, Forms & Inputs */
+body.dark-theme fieldset,
+body.dark-theme .card,
+body.dark-theme .flip-card-inner,
+body.dark-theme .flip-card-back,
+body.dark-theme table {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #333333 !important;
+}
+
+body.dark-theme input,
+body.dark-theme select,
+body.dark-theme textarea {
+    background-color: #2a2a2a !important;
+    color: #ffffff !important;
+    border: 1px solid #4f4f4f !important;
+}
+
+/* Base Text */
+body.dark-theme h1, 
+body.dark-theme h2, 
+body.dark-theme h3, 
+body.dark-theme h4, 
+body.dark-theme p, 
+body.dark-theme label, 
+body.dark-theme li,
+body.dark-theme legend {
+    color: #ffffff !important;
+}
+/* =========================================================
+   WELCOME BANNER STYLING
+   ========================================================= */
+#welcome-message {
+    background-color: #0f4c81;
+    color: #ffffff;
+    padding: 12px 20px;
+    margin: 15px auto;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    max-width: 90%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+#welcome-message span {
+    color: #60a5fa;
+    font-weight: bold;
+}
+
+/* =========================================================
+   DARK MODE OVERRIDES (Fixing White Login Box & Form Labels)
+   ========================================================= */
+
+body.dark-theme {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+/* Force Member Portal Login box, forms, fieldsets, asides, and cards to dark theme */
+body.dark-theme form,
+body.dark-theme fieldset,
+body.dark-theme section,
+body.dark-theme aside,
+body.dark-theme div:not(#theme-toggle),
+body.dark-theme .card,
+body.dark-theme .login-card,
+body.dark-theme .login-box {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #333333 !important;
+}
+
+/* Ensure all labels, headings, legends, and text inside dark boxes turn crisp white */
+body.dark-theme label,
+body.dark-theme legend,
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme p,
+body.dark-theme span,
+body.dark-theme li {
+    color: #ffffff !important;
+}
+
+/* Input fields inside dark mode */
+body.dark-theme input,
+body.dark-theme select,
+body.dark-theme textarea {
+    background-color: #2b2b2b !important;
+    color: #ffffff !important;
+    border: 1px solid #555555 !important;
+}
+
+body.dark-theme input::placeholder {
+    color: #aaaaaa !important;
+}
+
+/* Form Action Buttons */
+body.dark-theme button:not(#theme-toggle),
+body.dark-theme input[type="submit"],
+body.dark-theme input[type="button"] {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+    border: none !important;
+}
