@@ -11,12 +11,12 @@
         <h1 align="center">⚡ Chapchap Pay System</h1>
         <p align="center"><i>Fast, Simple, and Transparent Chama Savings</i></p>
         
-        <nav>
+       <nav>
             <ul class="navbar-container">
-                <li class="navbar-item"><b style="border-bottom: 2px solid white; padding-bottom: 5px;">Home</b></li>
+                <li class="navbar-item"><a href="index.php">Home</a></li>
                 <li class="navbar-item"><a href="contributions.php">Member Contributions</a></li>
                 <li class="navbar-item"><a href="register.php">Join & Loans</a></li>
-                <li class="navbar-item"><a href="gallery.php">Gallery</a></li>
+                <li class="navbar-item"><b style="border-bottom: 2px solid white; padding-bottom: 5px;">Gallery</b></li>
             </ul>
         </nav>
     </header>
