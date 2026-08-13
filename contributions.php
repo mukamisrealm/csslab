@@ -13,10 +13,12 @@
         <p align="center">Member Contributions Ledger</p>
         
         <nav>
-    <a href="index.php">Home</a>
-    <a href="contributions.php">Member Contributions</a>
-    <a href="register.php">Join & Loans</a>
-    <a href="gallery.php">Gallery</a>
+    <ul class="navbar-container">
+            <li class="navbar-item"><a href="index.php">Home</a></li>
+            <li class="navbar-item"><a href="contributions.php">Contributions</a></li>
+            <li class="navbar-item"><a href="register.php">Register</a></li>
+            <li class="navbar-item"><a href="gallery.php">Gallery</a></li>
+        </ul>
 </nav>
     </header>
 

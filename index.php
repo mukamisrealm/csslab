@@ -14,9 +14,9 @@
         <nav>
             <ul class="navbar-container">
                 <li class="navbar-item"><b style="border-bottom: 2px solid white; padding-bottom: 5px;">Home</b></li>
-                <li class="navbar-item"><a href="contributions.html">Member Contributions</a></li>
-                <li class="navbar-item"><a href="register.html">Join & Loans</a></li>
-                <li class="navbar-item"><a href="gallery.html">Gallery</a></li>
+                <li class="navbar-item"><a href="contributions.php">Member Contributions</a></li>
+                <li class="navbar-item"><a href="register.php">Join & Loans</a></li>
+                <li class="navbar-item"><a href="gallery.php">Gallery</a></li>
             </ul>
         </nav>
     </header>
@@ -39,19 +39,20 @@
             <li>Fundraiser</li>
         </ol>
 
-        <p align="center">
-            <a href="register.html">
-                <button type="button" class="cta-button">
-                    Get Started Today!
-                </button>
+        
+        <p align="center" style="margin-top: 25px;">
+            <a href="register.php" class="cta-button">
+                Get Started Today!
+                
             </a>
         </p>
     </main>
 
     <footer>
-        <p>&copy; 2026 Chapchap Pay System. Designed for CSS Lab Submission.</p>
+        <p>&copy; 2026 Chapchap Pay System. Designed for Web Development Submission.</p>
     </footer>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
