@@ -1,19 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
+/* =========================================================
+   1. BASE STYLES & TYPOGRAPHY
+   ========================================================= */
 body {
-    
     font-family: 'Inter', sans-serif;
     background-color: #f9f9f9;
     color: #333333;
     margin: 0;
     padding: 20px;
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     color: #003366;
 }
 
+/* =========================================================
+   2. HEADER & NAVIGATION (FLEXBOX)
+   ========================================================= */
 header {
     background-color: #e6f2ff;
     padding: 20px;
@@ -25,7 +31,7 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    background-color: #21aafa; /* Your signature bright blue */
+    background-color: #21aafa;
     padding: 15px;
     list-style-type: none; 
     margin: 0;
@@ -39,11 +45,12 @@ header {
     padding: 10px;
 }
 
-.navbar-item a, .navbar-item b {
-    color: white;
+.navbar-item a, 
+.navbar-item b {
+    color: #ffffff;
     text-decoration: none;
-    font-family: sans-serif;
     font-size: 16px;
+    font-weight: 600;
 }
 
 .navbar-item a:hover {
@@ -51,6 +58,34 @@ header {
     opacity: 0.9;
 }
 
+.active-page {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
+}
+
+/* =========================================================
+   3. WELCOME BANNER STYLING
+   ========================================================= */
+#welcome-message {
+    background-color: #0f4c81;
+    color: #ffffff;
+    padding: 12px 20px;
+    margin: 15px auto;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    max-width: 90%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+#welcome-message span {
+    color: #60a5fa;
+    font-weight: bold;
+}
+
+/* =========================================================
+   4. FORMS & CARDS
+   ========================================================= */
 fieldset {
     border: 2px solid #003366;
     border-radius: 6px;
@@ -65,14 +100,109 @@ legend {
     padding: 0 10px;
 }
 
-input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"] {
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="date"], 
+input[type="number"],
+input[type="password"] {
     width: 95%;
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #cccccc;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
+.login-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    max-width: 380px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.login-card h3 {
+    margin-top: 0;
+}
+
+.pin-input {
+    width: 80px !important;
+}
+
+/* Buttons */
+.cta-button, 
+input[type="submit"] {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover, 
+input[type="submit"]:hover {
+    background-color: #001f3f;
+    transform: scale(1.02);
+}
+
+input[type="reset"] {
+    background-color: #cc0000;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+input[type="reset"]:hover {
+    background-color: #990000;
+}
+
+/* =========================================================
+   5. TABLES (LEDGER)
+   ========================================================= */
+.ledger-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #ffffff;
+}
+
+.ledger-table th, 
+.ledger-table td {
+    border: 1px solid #cccccc;
+    padding: 12px;
+    text-align: left;
+}
+
+.ledger-table th {
+    background-color: #003366;
+    color: #ffffff;
+}
+
+.status-paid {
+    background-color: #ccffcc;
+    color: #006600;
+    font-weight: bold;
+}
+
+.status-pending {
+    background-color: #ffcccc;
+    color: #cc0000;
+    font-weight: bold;
+}
+
+/* =========================================================
+   6. GALLERY & FLIP CARDS (FLEXBOX)
+   ========================================================= */
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
@@ -83,8 +213,8 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"], 
 
 .flip-card {
     background-color: transparent;
-    width: 250px;
-    height: 250px;
+    width: 260px;
+    height: 260px;
     perspective: 1000px;
 }
 
@@ -101,7 +231,8 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"], 
     transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front, 
+.flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -126,173 +257,53 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"], 
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
-.cta-button {
-    background-color: #003366;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.cta-button:hover {
-    background-color: #001f3f;
-    transform: scale(1.05);
-}
-
-input[type="submit"] {
-    background-color: #003366;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-input[type="submit"]:hover {
-    background-color: #001f3f;
-}
-
-input[type="reset"] {
-    background-color: #cc0000;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-left: 10px;
-}
-
+/* =========================================================
+   7. FOOTER
+   ========================================================= */
 footer {
     text-align: center;
     margin-top: 40px;
     padding: 15px;
     background-color: #003366;
-    color: white;
+    color: #ffffff;
     border-radius: 6px;
     font-size: 14px;
 }
 
-.login-card {
-    background-color: #ffffff;
-    padding: 15px;
-    border: 1px solid #cccccc;
-    border-radius: 6px;
-    width: 320px;
-    margin-bottom: 20px;
-}
-
-.login-card h3 {
-    margin-top: 0;
-}
-
-.pin-input {
-    width: 60px !important;
-    padding: 5px;
-}
-
-.ledger-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    background-color: #ffffff;
-}
-
-.ledger-table th, .ledger-table td {
-    border: 1px solid #cccccc;
-    padding: 12px;
-    text-align: left;
-}
-
-.ledger-table th {
-    background-color: #003366;
-    color: white;
-}
-
-.status-paid {
-    background-color: #ccffcc;
-    color: #006600;
-    font-weight: bold;
-}
-
-.status-pending {
-    background-color: #ffcccc;
-    color: #cc0000;
-    font-weight: bold;
-}
 /* =========================================================
-   DARK MODE OVERRIDES (Header, Nav Bar, Links & Text)
+   8. DARK MODE OVERRIDES (CONSOLIDATED)
    ========================================================= */
-
-/* Main Background */
 body.dark-theme {
     background-color: #121212 !important;
     color: #ffffff !important;
 }
 
-/* Header & Title Banner */
-body.dark-theme header,
-body.dark-theme .header,
-body.dark-theme .header-container {
+/* Headers & Navigation */
+body.dark-theme header {
     background-color: #1f2937 !important;
     color: #ffffff !important;
-    border-color: #374151 !important;
 }
 
 body.dark-theme header h1,
 body.dark-theme header h2,
-body.dark-theme header p,
-body.dark-theme header span {
+body.dark-theme header p {
     color: #ffffff !important;
 }
 
-/* Navigation Bar & Links */
-body.dark-theme nav,
-body.dark-theme .navbar,
-body.dark-theme .nav-container {
+body.dark-theme .navbar-container {
     background-color: #0f4c81 !important;
 }
 
-body.dark-theme nav a,
-body.dark-theme .navbar a,
-body.dark-theme nav li {
+body.dark-theme .navbar-item a,
+body.dark-theme .navbar-item b {
     color: #ffffff !important;
-    text-shadow: none !important;
 }
 
-body.dark-theme nav a:hover,
-body.dark-theme .navbar a:hover {
-    color: #60a5fa !important;
-}
-
-/* Cards, Fieldsets, Forms & Inputs */
-body.dark-theme fieldset,
-body.dark-theme .card,
-body.dark-theme .flip-card-inner,
-body.dark-theme .flip-card-back,
-body.dark-theme table {
-    background-color: #1e1e1e !important;
-    color: #ffffff !important;
-    border-color: #333333 !important;
-}
-
-body.dark-theme input,
-body.dark-theme select,
-body.dark-theme textarea {
-    background-color: #2a2a2a !important;
-    color: #ffffff !important;
-    border: 1px solid #4f4f4f !important;
-}
-
-/* Base Text */
+/* Typography Overrides */
 body.dark-theme h1, 
 body.dark-theme h2, 
 body.dark-theme h3, 
@@ -303,80 +314,54 @@ body.dark-theme li,
 body.dark-theme legend {
     color: #ffffff !important;
 }
-/* =========================================================
-   WELCOME BANNER STYLING
-   ========================================================= */
-#welcome-message {
-    background-color: #0f4c81;
-    color: #ffffff;
-    padding: 12px 20px;
-    margin: 15px auto;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: 600;
-    max-width: 90%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-}
 
-#welcome-message span {
-    color: #60a5fa;
-    font-weight: bold;
-}
-
-/* =========================================================
-   DARK MODE OVERRIDES (Fixing White Login Box & Form Labels)
-   ========================================================= */
-
-body.dark-theme {
-    background-color: #121212 !important;
-    color: #ffffff !important;
-}
-
-/* Force Member Portal Login box, forms, fieldsets, asides, and cards to dark theme */
-body.dark-theme form,
+/* Containers, Cards, Forms, Tables */
 body.dark-theme fieldset,
-body.dark-theme section,
-body.dark-theme aside,
-body.dark-theme div:not(#theme-toggle),
-body.dark-theme .card,
 body.dark-theme .login-card,
-body.dark-theme .login-box {
+body.dark-theme .flip-card-inner,
+body.dark-theme .flip-card-back,
+body.dark-theme .ledger-table,
+body.dark-theme .ledger-table td {
     background-color: #1e1e1e !important;
     color: #ffffff !important;
     border-color: #333333 !important;
 }
 
-/* Ensure all labels, headings, legends, and text inside dark boxes turn crisp white */
-body.dark-theme label,
-body.dark-theme legend,
-body.dark-theme h1,
-body.dark-theme h2,
-body.dark-theme h3,
-body.dark-theme h4,
-body.dark-theme p,
-body.dark-theme span,
-body.dark-theme li {
+body.dark-theme .ledger-table th {
+    background-color: #0f4c81 !important;
     color: #ffffff !important;
 }
 
-/* Input fields inside dark mode */
-body.dark-theme input,
+/* Form Inputs */
+body.dark-theme input[type="text"],
+body.dark-theme input[type="email"],
+body.dark-theme input[type="tel"],
+body.dark-theme input[type="date"],
+body.dark-theme input[type="number"],
+body.dark-theme input[type="password"],
 body.dark-theme select,
 body.dark-theme textarea {
     background-color: #2b2b2b !important;
     color: #ffffff !important;
-    border: 1px solid #555555 !important;
+    border: 1px solid #4f4f4f !important;
 }
 
 body.dark-theme input::placeholder {
     color: #aaaaaa !important;
 }
 
-/* Form Action Buttons */
-body.dark-theme button:not(#theme-toggle),
+/* Buttons */
 body.dark-theme input[type="submit"],
-body.dark-theme input[type="button"] {
+body.dark-theme .cta-button {
     background-color: #2563eb !important;
     color: #ffffff !important;
-    border: none !important;
+}
+
+body.dark-theme input[type="submit"]:hover,
+body.dark-theme .cta-button:hover {
+    background-color: #1d4ed8 !important;
+}
+
+body.dark-theme footer {
+    background-color: #1f2937 !important;
 }

@@ -13,10 +13,10 @@
         
         <nav>
             <ul class="navbar-container">
-                <li class="navbar-item"><a href="index.html">Home</a></li>
-                <li class="navbar-item"><a href="contributions.html">Member Contributions</a></li>
+                <li class="navbar-item"><a href="index.php">Home</a></li>
+                <li class="navbar-item"><a href="contributions.php">Member Contributions</a></li>
                 <li class="navbar-item"><b style="border-bottom: 2px solid white; padding-bottom: 5px;">Join & Loans</b></li>
-                <li class="navbar-item"><a href="gallery.html">Gallery</a></li>
+                <li class="navbar-item"><a href="gallery.php">Gallery</a></li>
             </ul>
         </nav>
     </header>
@@ -25,7 +25,7 @@
         <h2>Application Desk</h2>
         <p>Fill out the form below to register with the Chama or request an emergency payout loan.</p>
         
-        <form action="#" method="POST">
+        <form action="process.php" method="POST">
             <fieldset>
                 <legend>Personal Particulars</legend>
                 <p>
@@ -34,11 +34,11 @@
                 </p>
                 <p>
                     <label for="emailAddr">Email Address:</label><br>
-                    <input type="email" id="emailAddr" name="emailAddr" required>
+                    <input type="email" id="emailAddr" name="emailAddr" required placeholder="e.g. jane@example.com">
                 </p>
                 <p>
                     <label for="phoneNumber">M-Pesa Mobile Number:</label><br>
-                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required placeholder="e.g. 0712345678">
                 </p>
             </fieldset>
 
@@ -46,7 +46,7 @@
                 <legend>Application Type</legend>
                 <p>Select what transaction process you are requesting:</p>
                 <p>
-                    <input type="radio" id="registerOption" name="requestType" value="register">
+                    <input type="radio" id="registerOption" name="requestType" value="register" checked>
                     <label for="registerOption">New Member Registration</label>
                 </p>
                 <p>
@@ -67,9 +67,10 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Chapchap Pay System. Designed for CSS Lab Submission.</p>
+        <p>&copy; 2026 Chapchap Pay System. Designed for Web Development Submission.</p>
     </footer>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
